@@ -19,9 +19,13 @@
 		width: 100%;
 		display: inline-table;
 		margin-bottom: 10px;
-		padding: 10px;
-		background-color: #00bf00;
-		border-color: #00bf00;
+		padding: 8px;
+	}
+  .followbt {
+		width: 100%;
+		display: inline-table;
+		margin-bottom: 10px;
+		padding: 8px;
 	}
 	.xhtitle {
 		margin-bottom: 20px;
