@@ -19,6 +19,9 @@
 		width: 100%;
 		display: inline-table;
 		margin-bottom: 10px;
+		padding: 10px;
+		background-color: #00bf00;
+		border-color: #00bf00;
 	}
 	.xhtitle {
 		margin-bottom: 20px;
