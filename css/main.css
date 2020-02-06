@@ -184,10 +184,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #666; font-
 }
 
 @media screen and (max-width: 800px) {
+    body{background: #ffffff; color: #000000;}
+    .bgcolor{border: 1px solid #00000019; color: #000000;}
     .pcsearch{display: none;}
     .mobilesearch{display: inline;}
     .mainbox {width:80%}
-    .searchbuttonbg{padding: 2px; width: 100%;}
+    .searchbuttonbg{padding: 1px; width: 100%;}
     .searchbutton{width: 20%;}
     .searchbutton:hover{width: 20%;}
     .Shortcutbg{ top: 1.5em; right: 6%;}
