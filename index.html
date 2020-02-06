@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>StartPage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <script src="Javascript/browser.js"></script>
+    <!-- <script type="text/javascript">
+        document.oncontextmenu = function () {
+            return false;
+        }
+    </script> -->
+</head>
+
+<body>
+    <!-- <video class="bgmv" id="video-background" autoplay="" loop="" poster="images/lake.jpg" data-wow-delay="0.5s">
+        <source src="assets/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest
+        you upgrade your browser.
+    </video> -->
+    <div class="mainbox">
+        <div class="Shortcutbg bgcolor">
+            <div class="icon"></div>
+        </div>
+        <!-- <div style="text-align: center; margin-bottom: 1em;"> -->
+            <!-- <img src="images/logo.png" style="width: 200px; margin: 0 auto 1.5em auto; display: block;" alt=""> -->
+        <!-- </div> -->
+        <div class="searchbox">
+            <form name="s" class="pcsearch" action="https://www.baidu.com/s" target="_blank">
+                <input type="text" id="q" class="bgcolor" name="wd" autofocus autocomplete="off" placeholder="Type in to Search...">
+                <div class="searchbuttonbg bgcolor">
+                    <!-- <input type="button" class="searchbutton icon baidu" onclick="window.open('https://www.baidu.com/s?wd='+s.wd.value,'')"> -->
+                    <input type="button" class="searchbutton icon google" onclick="window.open('http://www.google.com/search?q='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon zhihu" onclick="window.open('https://www.zhihu.com/search?type=content&q='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon bilibili" onclick="window.open('https://search.bilibili.com/all?keyword='+s.wd.value,'')">
+                    <!-- <input type="button" class="searchbutton icon taobao firstbutton" onclick="window.open('https://s.taobao.com/search?q='+s.wd.value,'')"> -->
+                    <input type="button" class="searchbutton icon iconfont" onclick="window.open('https://www.iconfont.cn/search/index?q='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon youtube" onclick="window.open('https://www.youtube.com/results?search_query='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon iqiyi" onclick="window.open('https://so.iqiyi.com/so/q_'+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon tencentvideo" onclick="window.open('https://v.qq.com/x/search/?q='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon translate" onclick="window.open('https://translate.google.cn/#view=home&op=translate&sl=auto&tl=en&text='+s.wd.value,'')">
+                    <!-- <input type="button" class="searchbutton icon youku" onclick="window.open('https://so.youku.com/search_video/q_'+s.wd.value,'')"> -->
+                    <input type="button" class="searchbutton icon weibo" onclick="window.open('https://s.weibo.com/weibo?q='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon github" onclick="window.open('https://github.com/search?q='+s.wd.value,'')">
+                    <input type="button" class="searchbutton icon chrome" onclick="window.open('https://chrome.google.com/webstore/search/'+s.wd.value,'')">
+                </div>
+            </form>
+            <form name="ms" class="mobilesearch" action="https://quark.sm.cn/s">
+                <input type="text" id="mq" class="bgcolor" name="q" autofocus autocomplete="off" placeholder="Type in to Search...">
+                <div class="searchbuttonbg bgcolor">
+                    <input type="button" class="searchbutton icon baidu firstbutton" onclick="javascript:location.href='https://www.baidu.com/s?wd='+ms.q.value,''">
+                    <input type="button" class="searchbutton icon bilibili" onclick="javascript:location.href='https://search.bilibili.com/all?keyword='+ms.q.value,''">
+                    <input type="button" class="searchbutton icon zhihu" onclick="javascript:location.href='https://www.zhihu.com/search?type=content&q='+ms.q.value,''">
+                    <input type="button" class="searchbutton icon google" onclick="javascript:location.href='http://www.google.com/search?q='+ms.q.value,''">
+                    <input type="button" class="searchbutton icon youtube" onclick="javascript:location.href='https://www.youtube.com/results?search_query='+ms.q.value,''">
+                    <input type="button" class="searchbutton icon translate" onclick="javascript:location.href='https://translate.google.cn/#view=home&op=translate&sl=auto&tl=en&text='+ms.q.value,''">
+                    <input type="button" class="searchbutton icon iconfont" onclick="javascript:location.href='https://www.iconfont.cn/search/index?q='+ms.q.value,''">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
