@@ -188,7 +188,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #666; font-
     .Shortcutbg:hover{ width: 88%; height: 200px;}
 }
 
-@media (prefers-color-scheme: dark) 
+@media (prefers-color-scheme: light) 
     body{background: #1D1D1D; color: #D5D5D5;}
     .icon{filter: brightness(125%);}
     .searchbutton:hover{background-color: #00000033;}
