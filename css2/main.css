@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+    body{
+        background-color: #FFF1D7;
+		font-size: 100%;
+		height: 100%;
+		width: 100%;
+        /*background: url(../images/bg.jpg);*/
+    }
+	.jnr {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 300px;
+		height: 150px;
+		margin-left: -150px;
+		margin-top: -150px;
+		text-align: center;
+		/* font-weight: 900; */
+		font-size: 2.5em;
+	}
+
+
+    #content { 
+		width: 100%;
+		height: 100%; 
+		top: 0px;
+		overflow: hidden; 
+		position: absolute; 
+	  }
+	  #snowflake { 
+		width: 100%; 
+		height: 100%; 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		overflow: hidden; 
+	  }
+	  .snowRoll { 
+		position: absolute; 
+		opacity: 0; 
+		-webkit-animation-name: mysnow; 
+		-webkit-animation-duration: 20s; 
+		-moz-animation-name: mysnow; 
+		-moz-animation-duration: 20s; 
+		height: 80px; 
+	  }
+	  @-webkit-keyframes mysnow {  
+		0% {
+		 bottom: 100%;
+		}
+		 50% {
+		 -webkit-transform: rotate(1080deg);
+		}
+		 100% {
+		 -webkit-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+		}
+	  }
+	  @-moz-keyframes mysnow {  
+		0% {
+		 bottom: 100%;
+		}
+		 50% {
+		 -moz-transform: rotate(1080deg);
+		}
+		 100% {
+		 -moz-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+		}
+	  }

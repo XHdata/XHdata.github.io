@@ -1,41 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
+
 <head>
-    <title>表白网页</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-        }
-        h1 {
-            color: #000000;
-        }
-        p {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #0B82E0;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-            border-radius: 6px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>We</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css2/style2.css">
+  <link rel="stylesheet" href="css2/webier.css">
+  <link rel="stylesheet" type="text/css" href="css2/main.css" />
+  <script type="text/javascript" src="js2/jquery.min.js"></script>
+  <script type="text/javascript" src="js2/jquery.transit.js"></script>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
 </head>
+
 <body>
-    <h1>我爱你</h1>
-    <p>贝贝CPDD</p>
-    <button>点击这里接受我的表白</button>
-    <script>
-        var button = document.querySelector('button');
-        button.addEventListener('click', function(){
-            alert('别说了，在一起吧');
-        });
-    </script>
+
+
+
+
+  <div class="container">
+    <div class="box">
+      <div class="title"> <span class="block"></span>
+        <p>爱beibei的第
+          <script language="JavaScript">
+            var urodz = new Date("8/4/2023"); var now = new Date(); var ile = now.getTime() - urodz.getTime(); var dni = Math.floor(ile / (1000 * 60 * 60 * 24)); document.write(+dni)
+          </script>天<span>.</span></p>
+      </div>
+      <div class="role">
+        <div class="block"></div>
+        <p>We are together</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id='content'>
+    <!-- 飘花 -->
+    <div id="snowflake"></div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      var snowflakeURl = [
+        './images2/icon_petal_1.png',
+        './images2/icon_petal_2.png',
+        './images2/icon_petal_3.png',
+        './images2/icon_petal_4.png',
+        './images2/icon_petal_5.png',
+        './images2/icon_petal_6.png',
+        './images2/icon_petal_7.png',
+        './images2/icon_petal_8.png'
+      ]
+      var container = $("#content");
+      visualWidth = container.width();
+      visualHeight = container.height();
+      //获取content的宽高
+      function snowflake() {
+        // 雪花容器
+        var $flakeContainer = $('#snowflake');
+
+        // 随机六张图
+        function getImagesName() {
+          return snowflakeURl[[Math.floor(Math.random() * 8)]];
+        }
+        // 创建一个雪花元素
+        function createSnowBox() {
+          var url = getImagesName();
+          return $('<div class="snowbox" />').css({
+            'width': 25,
+            'height': 26,
+            'position': 'absolute',
+            'backgroundRepeat': 'no-repeat',
+            'zIndex': 100000,
+            'top': '-41px',
+            'backgroundImage': 'url(' + url + ')'
+          }).addClass('snowRoll');
+        }
+        // 开始飘花
+        setInterval(function () {
+          // 运动的轨迹
+          var startPositionLeft = Math.random() * visualWidth - 100,
+            startOpacity = 1,
+            endPositionTop = visualHeight - 40,
+            endPositionLeft = startPositionLeft - 100 + Math.random() * 500,
+            duration = visualHeight * 10 + Math.random() * 5000;
+          // 随机透明度，不小于0.5
+          var randomStart = Math.random();
+          randomStart = randomStart < 0.5 ? startOpacity : randomStart;
+          // 创建一个雪花
+          var $flake = createSnowBox();
+          // 设计起点位置
+          $flake.css({
+            left: startPositionLeft,
+            opacity: randomStart
+          });
+          // 加入到容器
+          $flakeContainer.append($flake);
+          // 开始执行动画
+          $flake.transition({
+            top: endPositionTop,
+            left: endPositionLeft,
+            opacity: 0.7
+          }, duration, 'ease-out', function () {
+            $(this).remove() //结束后删除
+          });
+        }, 500);
+      }
+      snowflake()
+      //执行函数
+    })
+  </script>
+
+
+
 </body>
+
 </html>
